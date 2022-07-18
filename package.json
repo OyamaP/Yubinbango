@@ -1,0 +1,21 @@
+{
+  "name": "yubinbango",
+  "version": "1.0.0",
+  "description": "use yubinbango-core2",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
+    "prod": "webpack --mode production"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "yubinbango-core2": "^0.6.3"
+  }
+}
