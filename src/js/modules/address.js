@@ -14,7 +14,9 @@ export class Address {
 
     load = () => {
         this.form = document.querySelector(this.config.form);
-        ["blur", "change"].forEach(event => { this.form.querySelector(this.config.postal).addEventListener(event, this.run) });
+        const postal = this.form.querySelector(this.config.postal);
+        if(!postal) return;
+        ["blur", "change"].forEach(event => { postal.addEventListener(event, this.run) });
     }
 
     /**
@@ -37,7 +39,7 @@ export class Address {
      * @param {string} number
      * @returns {string}
      */
-     formatNumber = (number) => {
+    formatNumber = (number) => {
         return number.replace(/[０-９]/g, (n) => {
             return String.fromCharCode(n.charCodeAt(0) - 0xFEE0);
         });
